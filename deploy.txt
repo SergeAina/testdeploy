@@ -1,0 +1,96 @@
+
+HB1@DESKTOP-UDVUARH MINGW64 /d/essaideploy/formation-blog (master)
+$ npm install angular-cli-ghpages --save-dev
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.1.3 (node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.1.3: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
++ angular-cli-ghpages@0.5.2
+added 18 packages in 19.455s
+
+HB1@DESKTOP-UDVUARH MINGW64 /d/essaideploy/formation-blog (master)
+$ ng build --prod
+Your global Angular CLI version (1.7.1) is greater than your local
+version (1.6.3). The local Angular CLI version is used.
+
+To disable this warning use "ng set --global warnings.versionMismatch=false".
+Date: 2018-04-09T12:51:23.973Z
+Hash: 5472b9f21b4e04ed8526
+Time: 41211ms
+chunk {scripts} scripts.59079db74bd9dc9a0edc.bundle.js (scripts) 123 kB [initial] [rendered]
+chunk {0} main.a4c585f6cd4fc7e9609c.bundle.js (main) 427 kB [initial] [rendered]
+chunk {1} polyfills.6233469b59ce155cca70.bundle.js (polyfills) 61.4 kB [initial] [rendered]
+chunk {2} styles.3c05b5ad28c6c07f5ce8.bundle.css (styles) 115 kB [initial] [rendered]
+chunk {3} inline.bed5c79ae68e8a7846b5.bundle.js (inline) 1.45 kB [entry] [rendered]
+
+HB1@DESKTOP-UDVUARH MINGW64 /d/essaideploy/formation-blog (master)
+$ git remote show origin
+* remote origin
+  Fetch URL: https://github.com/Elvynia/formation-blog
+  Push  URL: https://github.com/Elvynia/formation-blog
+  HEAD branch: master
+  Remote branches:
+    angularjs  tracked
+    betterblog tracked
+    master     tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+
+HB1@DESKTOP-UDVUARH MINGW64 /d/essaideploy/formation-blog (master)
+$ git remote set-url add https://github.com/SergeAina/testdeploy.git
+fatal: No such remote 'add'
+
+HB1@DESKTOP-UDVUARH MINGW64 /d/essaideploy/formation-blog (master)
+$ git remote set-url origin https://github.com/SergeAina/testdeploy.git
+
+HB1@DESKTOP-UDVUARH MINGW64 /d/essaideploy/formation-blog (master)
+$ git remote show origin
+* remote origin
+  Fetch URL: https://github.com/SergeAina/testdeploy.git
+  Push  URL: https://github.com/SergeAina/testdeploy.git
+  HEAD branch: (unknown)
+  Remote branches:
+    refs/remotes/origin/angularjs  stale (use 'git remote prune' to remove)
+    refs/remotes/origin/betterblog stale (use 'git remote prune' to remove)
+    refs/remotes/origin/master     stale (use 'git remote prune' to remove)
+  Local branch configured for 'git pull':
+    master merges with remote master
+
+HB1@DESKTOP-UDVUARH MINGW64 /d/essaideploy/formation-blog (master)
+$ git push -u origin master
+Counting objects: 211, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (97/97), done.
+Writing objects: 100% (211/211), 128.87 KiB | 25.77 MiB/s, done.
+Total 211 (delta 107), reused 211 (delta 107)
+remote: Resolving deltas: 100% (107/107), done.
+To https://github.com/SergeAina/testdeploy.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+HB1@DESKTOP-UDVUARH MINGW64 /d/essaideploy/formation-blog (master)
+$ git branch
+* master
+
+HB1@DESKTOP-UDVUARH MINGW64 /d/essaideploy/formation-blog (master)
+$ git branch -m
+fatal: branch name required
+
+HB1@DESKTOP-UDVUARH MINGW64 /d/essaideploy/formation-blog (master)
+$ git checkout -b first-try
+Switched to a new branch 'first-try'
+M       package-lock.json
+M       package.json
+
+HB1@DESKTOP-UDVUARH MINGW64 /d/essaideploy/formation-blog (first-try)
+$ git branch
+* first-try
+  master
+
+HB1@DESKTOP-UDVUARH MINGW64 /d/essaideploy/formation-blog (first-try)
+$ git push -u origin first-try
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/SergeAina/testdeploy.git
+ * [new branch]      first-try -> first-try
+Branch 'first-try' set up to track remote branch 'first-try' from 'origin'.
